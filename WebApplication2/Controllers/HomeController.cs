@@ -346,6 +346,7 @@ namespace WebApplication2.Controllers
                                 test.TypeLength += chnls[c].FACTICAL_LENGTH;
                             }
                         }
+                        test.TypeLength= System.Math.Round(test.TypeLength, 2);
                         var chnls1 = ChannelList.Where(c =>c.TYPE == "1" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test1 = AttributList.Where(s => s.TypeName == "1-ci dərəcəli Kanallar").First();
                         test1.TypeCount += chnls1.Count;
@@ -353,6 +354,7 @@ namespace WebApplication2.Controllers
                         {
                             test1.TypeLength += chnls1[c].FACTICAL_LENGTH;
                         }
+                        test1.TypeLength = System.Math.Round(test1.TypeLength, 2);
                         var chnls2 = ChannelList.Where(c =>c.TYPE == "2" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test2 = AttributList.Where(s => s.TypeName == "2-ci dərəcəli Kanallar").First();
                         test2.TypeCount += chnls2.Count;
@@ -360,6 +362,7 @@ namespace WebApplication2.Controllers
                         {
                             test2.TypeLength += chnls2[c].FACTICAL_LENGTH;
                         }
+                        test2.TypeLength = System.Math.Round(test2.TypeLength, 2);
                         var chnls3 = ChannelList.Where(c =>c.TYPE == "3" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli Kanallar").First();
                         test3.TypeCount += chnls3.Count;
@@ -367,6 +370,7 @@ namespace WebApplication2.Controllers
                         {
                             test3.TypeLength += chnls3[c].FACTICAL_LENGTH;
                         }
+                        test3.TypeLength = System.Math.Round(test3.TypeLength, 2);
                         var chnls4 = ChannelList.Where(c => c.TYPE == "Qapali" && c.WATER_CAPABILITY >= min && c.WATER_CAPABILITY <= max).ToList();
                         var test4 = AttributList.Where(s => s.TypeName == "Qapalı Kanallar").First();
                         test4.TypeCount += chnls4.Count;
@@ -395,6 +399,7 @@ namespace WebApplication2.Controllers
                         {
                             listdrej2.TypeLength += drej2[d].FACTICAL_LENGTH;
                         }
+                        listdrej2.TypeLength = System.Math.Round(listdrej2.TypeLength, 2);
                         var drej3 = DrenajList.Where(d =>d.TYPE == "3" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej3 = AttributList.Where(s => s.TypeName == "3-ci dərəcəli ilkin drenlər").First();
                         listdrej3.TypeCount += drej3.Count;
@@ -402,6 +407,7 @@ namespace WebApplication2.Controllers
                         {
                             listdrej3.TypeLength += drej3[d].FACTICAL_LENGTH;
                         }
+                        listdrej3.TypeLength = System.Math.Round(listdrej3.TypeLength, 2);
                         var drej4 = DrenajList.Where(d => d.TYPE == "Qapalidren" && d.WATER_CAPABILITY >= min && d.WATER_CAPABILITY <= max).ToList();
                         var listdrej4 = AttributList.Where(s => s.TypeName == "Qapalı drenlər").First();
                         listdrej4.TypeCount += drej4.Count;
